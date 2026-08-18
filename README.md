@@ -42,12 +42,24 @@ Then open http://localhost:8000
 
 ## Images
 
-- **Hero** — put a wide landscape photo at `images/hero.jpg` (about 2000px wide
-  is plenty), then add the class `hero--photo` to the `<header class="hero">`
-  tag in `index.html`.
-- **Gallery** — put photos in `images/gallery/` and copy the commented example
-  block in `photographs.html` once per photo. Resize to ~1600px on the long edge
-  before committing; full-size camera files make the repo huge and the page slow.
+- **Logo** — `images/logo.png`. Transparent background, so it sits on any color.
+  It appears at the top of every page.
+- **Hero** — `images/hero.jpg`, the big photo behind the club name on the home
+  page. To change it, replace that file with another wide landscape shot
+  (~2400px wide).
+- **Gallery** — each photograph needs two files with the *same name*: the
+  full-size version in `images/gallery/` and a smaller copy in
+  `images/gallery/thumb/`. The page shows the thumbnail and links to the
+  full-size one. Then copy one `<figure>` block in `photographs.html`.
+
+To prepare new photos (ImageMagick):
+
+```bash
+magick photo.jpg -auto-orient -resize 1600x1600\> -strip -quality 82 images/gallery/name.jpg
+magick photo.jpg -auto-orient -resize 800x800\>  -strip -quality 80 images/gallery/thumb/name.jpg
+```
+
+Don't commit full-size camera files — they make the repo huge and the page slow.
 
 ## Deploying with Docker
 
