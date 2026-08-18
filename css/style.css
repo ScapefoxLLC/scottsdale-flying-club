@@ -88,6 +88,7 @@ a:hover { border-bottom-color: var(--accent); }
 .wordmark {
   font-family: var(--serif);
   font-weight: 400;
+  color: inherit;   /* beat the generic h1 color rule below */
   font-size: clamp(38px, 7vw, 78px);
   letter-spacing: .12em;
   margin: 0;
