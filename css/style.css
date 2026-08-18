@@ -1,0 +1,228 @@
+/* Scottsdale Flying Club — site styles
+   Plain CSS, no build step. Edit colors in :root below. */
+
+:root {
+  --sky:        #8fb8d8;
+  --sky-deep:   #4a7ba7;
+  --ink:        #2b3138;
+  --ink-soft:   #5c6672;
+  --rule:       #dfe4e9;
+  --paper:      #ffffff;
+  --paper-alt:  #f5f7f9;
+  --accent:     #a8623c;  /* desert clay — used sparingly for links/underlines */
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+  --sans:  -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(168, 98, 60, .35); }
+a:hover { border-bottom-color: var(--accent); }
+
+/* ---------- Navigation ---------- */
+
+.nav {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  z-index: 10;
+  padding: 22px 20px;
+  text-align: center;
+}
+.nav ul {
+  margin: 0; padding: 0; list-style: none;
+  display: flex; flex-wrap: wrap;
+  justify-content: center; gap: 8px 26px;
+}
+.nav a {
+  font-size: 15px;
+  letter-spacing: .02em;
+  color: #fff;
+  border-bottom: none;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, .45);
+}
+.nav a:hover,
+.nav a[aria-current="page"] { border-bottom: 1px solid rgba(255, 255, 255, .8); }
+
+/* Inner pages use a shorter banner; nav sits on a solid bar instead. */
+.nav--solid { position: static; background: var(--ink); padding: 16px 20px; }
+.nav--solid a { text-shadow: none; }
+
+/* ---------- Hero ---------- */
+
+.hero {
+  position: relative;
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 20px 60px;
+  color: #fff;
+  background-color: var(--sky);
+  background-image: linear-gradient(180deg, #a9cbe4 0%, #7ea9cd 60%, #6d9ac2 100%);
+  background-size: cover;
+  background-position: center;
+}
+/* Once you drop a photo at images/hero.jpg this rule takes over. */
+.hero--photo {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, .18), rgba(0, 0, 0, .18)),
+    url("../images/hero.jpg");
+}
+
+.hero__inner { max-width: 900px; }
+
+.wordmark {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(38px, 7vw, 78px);
+  letter-spacing: .12em;
+  margin: 0;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, .35);
+}
+.wordmark-sub {
+  font-family: var(--sans);
+  font-size: clamp(12px, 1.7vw, 16px);
+  letter-spacing: .34em;
+  text-transform: uppercase;
+  margin: 14px 0 0;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, .4);
+}
+.hero__tagline {
+  margin: 34px auto 0;
+  max-width: 640px;
+  font-size: clamp(16px, 2vw, 20px);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, .45);
+}
+
+/* Short banner for interior pages */
+.banner {
+  min-height: 240px;
+  padding: 60px 20px;
+}
+.banner .wordmark { font-size: clamp(30px, 4.5vw, 46px); }
+
+/* ---------- Page body ---------- */
+
+.wrap { max-width: 860px; margin: 0 auto; padding: 62px 22px; }
+.wrap--wide { max-width: 1120px; }
+
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; color: var(--ink); line-height: 1.25; }
+h1 { font-size: 34px; letter-spacing: .04em; margin: 0 0 8px; }
+h2 { font-size: 25px; margin: 44px 0 10px; }
+h3 { font-size: 19px; margin: 28px 0 6px; }
+
+.lede { font-size: 19px; color: var(--ink-soft); margin-top: 0; }
+
+.rule { border: 0; border-top: 1px solid var(--rule); margin: 46px 0; }
+
+.facts { list-style: none; margin: 0; padding: 0; }
+.facts li {
+  padding: 11px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.facts li:first-child { border-top: 1px solid var(--rule); }
+.facts strong { font-weight: 600; }
+
+.callout {
+  background: var(--paper-alt);
+  border-left: 3px solid var(--sky-deep);
+  padding: 18px 22px;
+  margin: 32px 0;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 12px 26px;
+  background: var(--ink);
+  color: #fff;
+  border: none;
+  font-size: 15px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.btn:hover { background: var(--sky-deep); border: none; }
+
+/* ---------- Gallery ---------- */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 14px;
+}
+.gallery figure { margin: 0; }
+.gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--paper-alt);
+}
+.gallery figcaption {
+  font-size: 13px;
+  color: var(--ink-soft);
+  padding-top: 6px;
+}
+.gallery a { border-bottom: none; }
+
+/* Placeholder tile shown where no photo has been supplied yet */
+.tile-empty {
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--paper-alt);
+  border: 1px dashed var(--rule);
+  color: var(--ink-soft);
+  font-size: 13px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+/* ---------- Video ---------- */
+
+.video {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin: 0 0 34px;
+  background: var(--paper-alt);
+}
+.video iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: 0;
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  background: var(--ink);
+  color: #b9c2cc;
+  font-size: 14px;
+  text-align: center;
+  padding: 34px 20px;
+}
+.footer a { color: #e2e8ee; border-bottom-color: rgba(226, 232, 238, .35); }
+.footer p { margin: 6px 0; }
+
+@media (max-width: 600px) {
+  .nav ul { gap: 6px 16px; }
+  .nav a { font-size: 14px; }
+  .hero { min-height: 66vh; }
+  .wrap { padding: 44px 20px; }
+}
