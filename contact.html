@@ -47,17 +47,15 @@
 
        The access key is not a secret — it only says where to deliver mail.
 
-       STILL TO DO: uncomment the "redirect" line below once the site is
-       actually live at scottsdaleflyingclub.org, so senders land on our own
-       thanks.html page rather than the generic Web3Forms one. Leave it
-       commented until then, or the form will send people to a dead address.
+       After sending, people land on thanks.html — that is what the
+       "redirect" field below does.
        ============================================================ -->
   <form class="form" action="https://api.web3forms.com/submit" method="POST">
 
     <input type="hidden" name="access_key" value="41f81bf2-0b7c-4ecf-a955-5f83c5f3bcd9">
     <input type="hidden" name="subject" value="Enquiry from the Scottsdale Flying Club website">
     <input type="hidden" name="from_name" value="Scottsdale Flying Club website">
-    <!-- <input type="hidden" name="redirect" value="https://scottsdaleflyingclub.org/thanks.html"> -->
+    <input type="hidden" name="redirect" value="https://scottsdaleflyingclub.org/thanks.html">
 
     <!-- Spam trap. People never see it; bots fill it in and get rejected. -->
     <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
