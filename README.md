@@ -9,10 +9,10 @@ single `.html` file that links to one stylesheet.
 index.html         Home
 about.html         About
 join.html          Join
-history.html       History
 photographs.html   Photographs
 video.html         Video
 contact.html       Contact
+thanks.html        Shown after the contact form is submitted
 css/style.css      All styling (colors live in the :root block at the top)
 images/            Site images. hero.jpg is the big homepage photo.
 images/gallery/    Photographs page images.
@@ -28,7 +28,7 @@ Open any `.html` file in a text editor. Text written in `ALL CAPS` is a
 placeholder waiting to be replaced with real copy.
 
 The navigation appears at the top of each page. If you add or rename a page, the
-nav list has to be updated in every file — there are seven of them.
+nav list has to be updated in every file.
 
 ## Preview locally
 
