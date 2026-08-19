@@ -35,17 +35,62 @@
 
 <main class="wrap">
 
-  <p class="lede">OPENING — e.g. "Questions about membership, or want to come see the airplane? Get in touch."</p>
+  <p class="lede">Questions about membership, or want to come and see the airplane?
+  Send us a note. We have two openings at the moment.</p>
 
+  <!-- ============================================================
+       BEFORE THIS FORM WILL WORK, do two things:
+
+       1. Get a free access key at https://web3forms.com (enter the club's
+          email address; the key arrives by email). Paste it into the
+          access_key field below, replacing PASTE-YOUR-ACCESS-KEY-HERE.
+       2. Once the site has a domain, uncomment the "redirect" line so
+          people land on our own thank-you page after sending.
+
+       Submissions are emailed straight to whatever address the key is
+       registered to. Nothing is stored on our server.
+       ============================================================ -->
+  <form class="form" action="https://api.web3forms.com/submit" method="POST">
+
+    <input type="hidden" name="access_key" value="PASTE-YOUR-ACCESS-KEY-HERE">
+    <input type="hidden" name="subject" value="Enquiry from the Scottsdale Flying Club website">
+    <input type="hidden" name="from_name" value="Scottsdale Flying Club website">
+    <!-- <input type="hidden" name="redirect" value="https://YOURDOMAIN/thanks.html"> -->
+
+    <!-- Spam trap. People never see it; bots fill it in and get rejected. -->
+    <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+
+    <label for="f-name">Your name</label>
+    <input id="f-name" name="name" type="text" autocomplete="name" required>
+
+    <label for="f-email">Email</label>
+    <input id="f-email" name="email" type="email" autocomplete="email" required>
+
+    <label for="f-phone">Phone (optional)</label>
+    <input id="f-phone" name="phone" type="text" autocomplete="tel">
+
+    <label for="f-ratings">Ratings and total time (optional)</label>
+    <input id="f-ratings" name="ratings" type="text" placeholder="e.g. Private, instrument, 450 hours">
+
+    <label for="f-message">Message</label>
+    <textarea id="f-message" name="message" rows="7" required></textarea>
+
+    <button class="btn" type="submit">Send message</button>
+
+  </form>
+
+  <hr class="rule">
+
+  <h2>Other ways to reach us</h2>
   <ul class="facts">
     <li><strong>Email</strong> — <a href="mailto:EMAIL@EXAMPLE.COM">EMAIL@EXAMPLE.COM</a></li>
     <li><strong>Phone</strong> — PHONE NUMBER (optional)</li>
-    <li><strong>Mail</strong> — MAILING ADDRESS (optional)</li>
-    <li><strong>Where we are</strong> — Phoenix Deer Valley Airport (KDVT), Phoenix, Arizona</li>
+    <li><strong>Where we are</strong> — Phoenix Deer Valley Airport (KDVT), Phoenix, Arizona.
+      The airplane is hangared on the north side of the field.</li>
   </ul>
 
   <h2>Find us</h2>
-  <p>DIRECTIONS — which gate or ramp to meet at, and any access notes for visitors.</p>
+  <p>DIRECTIONS — which gate to meet at, and any access notes for visitors.</p>
 
   <!-- Optional map. Uncomment to embed; no API key needed for this form.
   <div class="video">

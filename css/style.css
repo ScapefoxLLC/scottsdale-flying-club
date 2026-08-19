@@ -189,6 +189,48 @@ h3 { font-size: 19px; margin: 28px 0 6px; }
   font-size: 13px; letter-spacing: .1em; text-transform: uppercase;
 }
 
+/* ---------- Contact form ---------- */
+
+.form { margin: 28px 0 0; max-width: 620px; }
+
+.form label {
+  display: block;
+  margin: 20px 0 6px;
+  font-size: 14px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form textarea {
+  width: 100%;
+  padding: 11px 13px;
+  font: inherit;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 0;
+}
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: var(--sky-deep);
+  box-shadow: 0 0 0 2px rgba(74, 123, 167, .18);
+}
+.form textarea { resize: vertical; }
+
+.form button { margin-top: 26px; cursor: pointer; font-family: inherit; }
+
+/* Honeypot — hidden from people, visible to bots that fill every field. */
+.form .hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px; height: 1px;
+  opacity: 0;
+}
+
 /* ---------- Video ---------- */
 
 .video {
