@@ -19,7 +19,7 @@ images/gallery/    Photographs page images.
 Dockerfile         nginx image, for deploying on a Docker host.
 ```
 
-"For Members" in the navigation is an external link to AircraftClubs — it is not
+"For Members" in the navigation is an external link to Flight Circle — it is not
 a page in this repo.
 
 ## Editing
