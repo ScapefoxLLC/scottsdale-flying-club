@@ -1,0 +1,37 @@
+Scottsdale Flying Club — draft website
+======================================
+
+TO VIEW IT
+----------
+Unzip this folder somewhere, then double-click:
+
+    index.html
+
+It opens in your web browser. Everything works offline — click the menu
+across the top to move between pages, and click any photograph on the
+Photographs page to see it full size.
+
+There is nothing to install and no internet connection required, apart
+from the map on the Contact page.
+
+
+WHAT TO LOOK AT
+---------------
+Home          Overview of the club
+About         The airplane, the panel, the field, how the club runs
+Join          Costs, experience required, checkout
+Photographs   The photo gallery
+Video         Empty for now — waiting on footage
+Contact       Enquiry form and directions
+
+"For Members" in the menu is a link out to AircraftClubs, the scheduling
+system, so it will leave the site.
+
+
+NOTES
+-----
+- The contact form is live and really does send email, so please don't
+  submit it as a test.
+- The Video page is deliberately empty.
+- This is a draft. Comments on wording, missing information and anything
+  that reads wrong to a pilot are all welcome.
