@@ -41,20 +41,19 @@
   the club through with you.</p>
 
   <!-- ============================================================
-       BEFORE THIS FORM WILL WORK, do two things:
+       This form posts to Web3Forms, which emails each submission to the
+       address the access key below is registered to. Nothing is stored on
+       our own server, and no server-side code is involved.
 
-       1. Get a free access key at https://web3forms.com (enter the club's
-          email address; the key arrives by email). Paste it into the
-          access_key field below, replacing PASTE-YOUR-ACCESS-KEY-HERE.
-       2. Once the site has a domain, uncomment the "redirect" line so
-          people land on our own thank-you page after sending.
+       The access key is not a secret — it only says where to deliver mail.
 
-       Submissions are emailed straight to whatever address the key is
-       registered to. Nothing is stored on our server.
+       STILL TO DO: once the site has a domain, uncomment the "redirect"
+       line so senders land on our own thanks.html page rather than the
+       generic Web3Forms one.
        ============================================================ -->
   <form class="form" action="https://api.web3forms.com/submit" method="POST">
 
-    <input type="hidden" name="access_key" value="PASTE-YOUR-ACCESS-KEY-HERE">
+    <input type="hidden" name="access_key" value="41f81bf2-0b7c-4ecf-a955-5f83c5f3bcd9">
     <input type="hidden" name="subject" value="Enquiry from the Scottsdale Flying Club website">
     <input type="hidden" name="from_name" value="Scottsdale Flying Club website">
     <!-- <input type="hidden" name="redirect" value="https://YOURDOMAIN/thanks.html"> -->
