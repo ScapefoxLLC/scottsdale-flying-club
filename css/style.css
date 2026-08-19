@@ -88,7 +88,7 @@ a:hover { border-bottom-color: var(--accent); }
       rgba(12, 20, 32, .10) 70%,
       rgba(12, 20, 32, .10) 100%),
     url("../images/hero.jpg");
-  background-position: center 72%;
+  background-position: center 66%;
 }
 
 .hero__inner { max-width: 980px; }
