@@ -132,6 +132,15 @@ h3 { font-size: 19px; margin: 28px 0 6px; }
 
 .rule { border: 0; border-top: 1px solid var(--rule); margin: 46px 0; }
 
+/* A single wide photo set into the page body */
+.feature { margin: 0 0 38px; }
+.feature img { width: 100%; }
+.feature figcaption {
+  font-size: 13px;
+  color: var(--ink-soft);
+  padding-top: 8px;
+}
+
 .facts { list-style: none; margin: 0; padding: 0; }
 .facts li { padding: 11px 0; border-bottom: 1px solid var(--rule); }
 .facts li:first-child { border-top: 1px solid var(--rule); }
