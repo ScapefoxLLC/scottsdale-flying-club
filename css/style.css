@@ -203,6 +203,12 @@ h3 { font-size: 19px; margin: 28px 0 6px; }
   color: var(--ink-soft);
   padding-top: 6px;
 }
+.gallery figcaption .credit {
+  display: block;
+  font-size: 11px;
+  color: var(--ink-soft);
+  opacity: .75;
+}
 .gallery a { border-bottom: none; display: block; }
 .gallery a:hover img { opacity: .88; }
 
