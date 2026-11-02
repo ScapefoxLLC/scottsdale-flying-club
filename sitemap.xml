@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Add a page here when you add one to the site. thanks.html is deliberately
-     left out: it is the post-form landing page and is marked noindex. -->
+<!-- Add a page here when you add one to the site. thanks.html and video.html are
+     deliberately left out: both are marked noindex (thanks.html is the post-form
+     landing page; video.html is empty until there is a video to show). -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://scottsdaleflyingclub.org/</loc>
@@ -21,11 +22,6 @@
     <loc>https://scottsdaleflyingclub.org/photographs.html</loc>
     <lastmod>2026-11-02</lastmod>
     <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://scottsdaleflyingclub.org/video.html</loc>
-    <lastmod>2026-11-02</lastmod>
-    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://scottsdaleflyingclub.org/contact.html</loc>

@@ -1,5 +1,8 @@
 User-agent: *
 Allow: /
-Disallow: /thanks.html
+
+# thanks.html and video.html are kept out of search with a noindex meta tag on
+# the pages themselves, NOT with a Disallow here. A Disallow blocks the crawl,
+# which would stop a search engine ever reading the noindex.
 
 Sitemap: https://scottsdaleflyingclub.org/sitemap.xml
